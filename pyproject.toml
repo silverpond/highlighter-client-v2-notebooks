@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "highlighter_client_v2_notebooks"
+version = "0.2"
+description = ""
+authors = [
+"joshua patterson <joshua.patterson@silverpond.com.au>",
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+jupyterlab = "^3.2.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
