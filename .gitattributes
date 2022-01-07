@@ -1,0 +1,3 @@
+*.ipynb filter=clean-nb
+*.zpln filter=clean-nb
+*.ipynb diff=ipynb
