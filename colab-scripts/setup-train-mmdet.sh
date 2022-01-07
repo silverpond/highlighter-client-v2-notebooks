@@ -9,7 +9,7 @@ pip3 install torch==1.10.1+cu113 torchvision==0.11.2+cu113 -f https://download.p
 
 pip3 install -i https://${PYPI_USERNAME}:${PYPI_PASSWORD}@pypi.silverpond.com.au/simple highlighter-client-v2-alpha==0.5
 
-pip3 install mmcv-full=1.3.17 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
+pip3 install mmcv-full==1.3.17 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
 
 pip3 install onnx onnxruntime==1.8.1
 
