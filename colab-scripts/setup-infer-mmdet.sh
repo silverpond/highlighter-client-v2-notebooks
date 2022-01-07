@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Needed for mmcv
-apt install -y libmagic-dev
+# # Needed for mmcv
+# apt install -y libmagic-dev
 
 # Pip install, order matters I think
 # at least install mmdet last
