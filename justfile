@@ -9,7 +9,3 @@ git-filters:
 
 jupyter:
   poetry run jupyter lab --no-browser --allow-root --ip 0.0.0.0 --port 8901 .
-
-clean:
-  rm requirements.txt
-  rm -r data
