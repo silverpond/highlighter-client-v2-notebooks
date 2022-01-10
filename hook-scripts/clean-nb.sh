@@ -8,4 +8,4 @@ NB=`cat`
 
 REPO=`pwd`
 
-echo ${NB} | $REPO/hook-scripts/sanitize-highlighter-account-url.sh | $REPO/hook-scripts/sanitize-highlighter-creds.sh | $REPO/hook-scripts/sanitize-pypi-creds.sh | poetry run python -m nbstripout
+echo ${NB} | poetry run python -m nbstripout | $REPO/hook-scripts/sanitize-highlighter-account-url.sh | $REPO/hook-scripts/sanitize-highlighter-creds.sh | $REPO/hook-scripts/sanitize-pypi-creds.sh
