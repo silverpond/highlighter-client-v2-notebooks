@@ -20,7 +20,34 @@ nbstripout = "^0.5.0"
 highlighter-client-v2-alpha = "==0.6"
 
 [tool.poe.tasks]
-force-cuda11 = "python -m pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/cu111/torch_stable.html"
+install-torch = "pip3 install torch==1.10.1+cu113 torchvision==0.11.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html"
+
+[tool.poe.tasks.install-hcp]
+shell = """
+pip3 install -i https://${PYPI_USERNAME}:${PYPI_PASSWORD}@pypi.silverpond.com.au/simple highlighter-client-v2-alpha==0.6
+"""
+
+
+[tool.poe.tasks.install-mmcv-full]
+shell = """
+pip3 install mmcv-full==1.3.17 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html
+"""
+
+[tool.poe.tasks.install-onnx]
+shell = """
+pip3 install onnx onnxruntime==1.8.1
+"""
+
+
+[tool.poe.tasks.install-mmdet]
+shell = """
+git clone --depth 1 --branch v2.18.0 https://github.com/open-mmlab/mmdetection.git
+cd mmdetection; 
+pip install .
+"""
+
+
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -4,9 +4,40 @@
 
 # Development
 
-```bash
-just init
-just git-filters
-poetry shell
-just jupyter
+
+### Setup a virtualenv
+At time of writing: python = 3.7.9
+```Bash
+python3 -m venv env
+source env/bin/activate
 ```
+
+---
+
+### poetry setup
+```Bash
+pip install --upgrade pip
+pip install poetry poethepoet
+
+# get pypi credentials from silverpond team
+export PYPI_USERNAME=<username>
+export PYPI_PASSWORD=<password>
+```
+
+## Install deps
+```Bash
+poe install-torch
+poe install-hcp
+poe install-mmcv-full
+poe install-onnx
+poe install-mmdet
+```
+
+---
+
+## Run the notebooks!
+
+```Bash
+jupyter lab --no-browser --allow-root --ip 0.0.0.0 --port 6606 .
+```
+
